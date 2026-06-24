@@ -11,7 +11,7 @@
   "status": "active",
   "backups": {
     "total": 8,
-    "completed": 4,
+    "completed": 6,
     "schedule": [
       {
         "index": 1,
@@ -54,7 +54,9 @@
       {
         "index": 7,
         "at": "2026-06-24T06:27:00Z",
-        "status": "pending"
+        "status": "completed",
+        "completedAt": "2026-06-24T06:27:27Z",
+        "note": "local commit ok, remote push ok (1 file changed)"
       },
       {
         "index": 8,
