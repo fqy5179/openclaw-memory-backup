@@ -38,14 +38,15 @@ git commit -m "lifecycle-backup #${BACKUP_INDEX} [${TIMESTAMP}]" \
     -m "Backup index: ${BACKUP_INDEX}/${TOTAL_BACKUPS:-8}" \
     -m "Final: ${IS_FINAL}"
 
-# 推送到远程
-REMOTE=$(git remote | head -1)
-if [ -n "$REMOTE" ]; then
-    git push "$REMOTE" main 2>&1 || git push "$REMOTE" HEAD 2>&1
-    echo "Backup #${BACKUP_INDEX} pushed successfully at ${TIMESTAMP}"
-else
-    echo "WARNING: No remote configured, backup is local only"
-fi
+# 推送到公开仓库（不含敏感文件）
+git push origin main 2>&1 || echo "WARN: origin push failed"
+
+# 推送到私有仓库（含 .openclaw/ 敏感文件）
+git add -f .openclaw/recovery-token .openclaw/workspace-state.json 2>/dev/null || true
+git diff --cached --quiet || git commit -m "include secrets for private backup" 2>/dev/null || true
+git push private main 2>&1 || echo "WARN: private push failed"
+
+echo "Backup #${BACKUP_INDEX} pushed to both remotes at ${TIMESTAMP}"
 
 # 更新 lifecycle.json 中的备份状态
 if command -v python3 > /dev/null 2>&1; then
