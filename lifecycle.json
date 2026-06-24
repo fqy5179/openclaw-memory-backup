@@ -60,8 +60,16 @@
   },
   "recoveryChannel": "openclaw-weixin",
   "github": {
-    "repo": "fqy5179/openclaw-memory-backup",
-    "branch": "main"
+    "public": {
+      "repo": "fqy5179/openclaw-memory-backup",
+      "branch": "main",
+      "contains": "sanitized files only"
+    },
+    "private": {
+      "repo": "fqy5179/openclaw-private-backup",
+      "branch": "main",
+      "contains": "full backup with secrets"
+    }
   },
   "cronJobIds": [
     "9ee73dfe-888f-4ce8-8882-ffd2d17d3b67",
