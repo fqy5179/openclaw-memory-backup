@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
-  "token": "a8bbd440a1d60371c65bdf862d84a27fa030b7c63a7f1caa20e83fa1d890217c",
+  "tokenHash": "ff26402d8f93d189a1655ad44f12324a12f13d8ab976b93ba716e1589beb8ea9",
+  "tokenStorage": ".openclaw/recovery-token (gitignored)",
   "createdAt": "2026-06-24T02:57:00Z",
   "createdAtMs": 1782272220000,
   "deadlineAt": "2026-06-24T06:57:00Z",

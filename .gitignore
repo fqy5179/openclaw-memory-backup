@@ -6,3 +6,4 @@
 *.key
 *.pem
 *.env
+*.tar.gz
