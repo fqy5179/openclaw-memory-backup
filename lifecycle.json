@@ -27,7 +27,7 @@
         "at": "2026-06-24T04:27:00Z",
         "status": "completed",
         "completedAt": "2026-06-24T04:28:11Z",
-        "note": "local commit ok, remote push failed (no credentials)"
+        "note": "local commit ok, remote push ok (force push after credential setup)"
       },
       {
         "index": 4,

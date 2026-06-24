@@ -19,6 +19,9 @@ if ! git rev-parse --git-dir > /dev/null 2>&1; then
     exit 1
 fi
 
+# 认证信息已通过 git credential store 配置（.git/credentials）
+# 不从 lifecycle.json 读取 token，避免泄露到 GitHub
+
 # 添加所有工作区文件（排除敏感文件）
 git add -A
 git add lifecycle.json lifecycle-backup.sh recovery-instruction.md 2>/dev/null || true
