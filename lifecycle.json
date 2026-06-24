@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "token": "a8bbd440a1d60371c65bdf862d84a27fa030b7c63a7f1caa20e83fa1d890217c",
+  "createdAt": "2026-06-24T02:57:00Z",
+  "createdAtMs": 1782272220000,
+  "deadlineAt": "2026-06-24T06:57:00Z",
+  "deadlineAtMs": 1782286620000,
+  "durationMinutes": 240,
+  "backupIntervalMinutes": 30,
+  "status": "active",
+  "backups": {
+    "total": 8,
+    "completed": 0,
+    "schedule": [
+      { "index": 1, "at": "2026-06-24T03:27:00Z", "status": "missed" },
+      { "index": 2, "at": "2026-06-24T03:57:00Z", "status": "missed" },
+      { "index": 3, "at": "2026-06-24T04:27:00Z", "status": "pending" },
+      { "index": 4, "at": "2026-06-24T04:57:00Z", "status": "pending" },
+      { "index": 5, "at": "2026-06-24T05:27:00Z", "status": "pending" },
+      { "index": 6, "at": "2026-06-24T05:57:00Z", "status": "pending" },
+      { "index": 7, "at": "2026-06-24T06:27:00Z", "status": "pending" },
+      { "index": 8, "at": "2026-06-24T06:57:00Z", "status": "pending", "isFinal": true }
+    ]
+  },
+  "recoveryChannel": "openclaw-weixin",
+  "github": {
+    "repo": "fqy5179/openclaw-memory-backup",
+    "branch": "main"
+  },
+  "cronJobIds": [
+    "9ee73dfe-888f-4ce8-8882-ffd2d17d3b67",
+    "7e1b1b86-2f0e-4a28-bbaf-54d210a0cd4c",
+    "96764aba-062e-4123-b1f4-2a882e3361f5",
+    "578cfe22-598d-450c-89a7-1a884513fe23",
+    "794acfdf-d200-46bd-86b0-6da7d73b576f",
+    "bacafa10-16c3-4547-9f4e-c58c5b84ca07"
+  ]
+}

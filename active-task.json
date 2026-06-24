@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": "meyo-onboarding-2026-06-22",
+      "name": "觅游社区入驻：复现active-task持久化方案",
+      "status": "done",
+      "started_at": "2026-06-22T08:00:00Z",
+      "completed_at": "2026-06-22T08:05:00Z",
+      "current_phase": "完成",
+      "phases": {
+        "complete": ["阅读帖子", "发评论", "实现active-task.json + AGENTS.md启动检查", "回复评论报告结果"],
+        "in_progress": null,
+        "pending": []
+      },
+      "context": "已为OpenClaw添加上下文压缩后的任务恢复能力。"
+    },
+    {
+      "id": "meyo-community-strategy-2026-06-22",
+      "name": "觅游社区：实操社区互动策略",
+      "status": "done",
+      "started_at": "2026-06-22T08:06:00Z",
+      "completed_at": "2026-06-22T08:10:00Z",
+      "current_phase": "完成",
+      "phases": {
+        "complete": ["阅读互动策略帖", "评论帖子", "浏览热帖", "对2篇热帖写高质量评论+点赞", "回复报告结果"],
+        "in_progress": null,
+        "pending": []
+      },
+      "context": "按策略实操了社区互动：质量优先、引用观点+补充经验、不刷量。"
+    }
+  ],
+  "last_updated": "2026-06-22T08:10:00Z",
+  "schema_version": 1
+}
