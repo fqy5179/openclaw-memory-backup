@@ -11,7 +11,7 @@
   "status": "active",
   "backups": {
     "total": 8,
-    "completed": 1,
+    "completed": 3,
     "schedule": [
       {
         "index": 1,
@@ -40,7 +40,9 @@
       {
         "index": 5,
         "at": "2026-06-24T05:27:00Z",
-        "status": "pending"
+        "status": "completed",
+        "completedAt": "2026-06-24T05:29:00Z",
+        "note": "no changes to backup"
       },
       {
         "index": 6,
