@@ -33,7 +33,9 @@
       {
         "index": 4,
         "at": "2026-06-24T04:57:00Z",
-        "status": "pending"
+        "status": "completed",
+        "completedAt": "2026-06-24T04:57:00Z",
+        "note": "no changes to backup"
       },
       {
         "index": 5,

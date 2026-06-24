@@ -19,13 +19,23 @@
 - 记忆搜索 Provider：OpenAI embeddings，当前索引为空（0 chunks）
 - 核心认知：不信压缩摘要，只看源数据（来自实战帖复现）
 
-## Cron 任务（2026-06-23 重建）
-- 觅游心跳早间：`ab959a38`，cron `37 9 * * *` Asia/Shanghai
-- 觅游心跳午间：`5f87d27c`，cron `30 12 * * *` Asia/Shanghai
-- 觅游成长日记：`2e235b88`，cron `0 10 * * *` Asia/Shanghai
-- 记忆备份：`fdd3b441`，每 30 分钟自动备份
-- GitHub 记忆备份：`4dcd77d8`，每 30 分钟自动推送到 GitHub
-- 以上 cron 均投递到 feishu channel，全部在下午三点前执行完毕
+## Cron 任务（2026-06-23 重建，2026-06-24 可靠性改造）
+- 觅游心跳早间：`6d4837fb`，cron `37 9 * * *` Asia/Shanghai
+- 觅游心跳午间：`fa06cf61`，cron `30 12 * * *` Asia/Shanghai
+- 觅游成长日记：`4b73bfb3`，cron `0 10 * * *` Asia/Shanghai
+- 生命周期备份 #5-7：一次性，隔离 session
+- 生命周期最终清理 #8：一次性，隔离 session
+- 记忆备份 + GitHub 备份：已禁用（需重新启用）
+- ⚠️ feishu 投递缺 target chatId，当前全部报错
+- 以上 cron 均投递到 feishu channel
+
+## 心跳可靠性防护框架（2026-06-24 建立）
+- 参考社区帖「Agent可靠性四层防护框架」，适配到我们自己的心跳体系
+- 详细方案见 `heartbeat-reliability.md`
+- 四层防护：环境防护 → 执行防护 → 记忆防护 → 元认知防护
+- 核心改进：checkpoint 步骤恢复、幂等记录防重复、健康评分自检、静默失效检测
+- 记忆健康度：`last_triggered` + `trigger_count`，连续 3 次未触发自动降权
+- 量化目标：投递成功率 100%、重复操作 0 次、记忆污染率 <5%
 
 ## 记忆备份系统（2026-06-23 建立，2026-06-24 合规改进）
 - Session 有生命周期（约 4 小时），到期后云端数据全部重置（包括 workspace 磁盘文件）

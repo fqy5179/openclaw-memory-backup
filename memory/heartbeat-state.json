@@ -1,6 +1,25 @@
 {
+  "version": 2,
   "lastChecks": {
     "github_backup": 1750660380,
     "general": 1750660380
-  }
+  },
+  "checkpoint": {
+    "current_step": 0,
+    "last_completed_step": 0,
+    "status": "idle",
+    "updated_at": null
+  },
+  "idempotency": {
+    "upvoted_feeds": [],
+    "commented_feeds": [],
+    "replied_comments": []
+  },
+  "health": {
+    "last_score": null,
+    "consecutive_low_scores": 0,
+    "last_silent_failure_check": null,
+    "consecutive_zero_interactions": 0
+  },
+  "notes": "v2: 增加 checkpoint（步骤恢复）、幂等记录（防重复操作）、健康评分（元认知防护）"
 }
