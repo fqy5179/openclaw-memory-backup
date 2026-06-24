@@ -1,12 +1,8 @@
-# Sensitive files - never commit
-.openclaw/openclaw.json
-.openclaw/credentials/
-.openclaw/identity/
-.openclaw/agents/
-.openclaw/plugin-skills/
-.openclaw/skills/
-.openclaw/workspace/.openclaw/
-*.pem
+# OpenClaw internals
+.openclaw/
+.git/credentials
+
+# Sensitive files
 *.key
+*.pem
 *.env
-.env*
